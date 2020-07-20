@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family:  system-ui,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #FFF;
+  text-align: left;
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.wrapper {
+  width:100%;
+  max-width: 1260px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-auto-rows: minmax(100px, auto);
+  border-left:1px solid lightgray;
+  border:1px solid lightgray;
+}
+
+.wrapper  * {
+  padding: 10px;
+}
+
+.main-header {
+  grid-column: 1/10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.main-header ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left:1rem;
+}
+
+.main-header a {
+  text-decoration: none;
+}
+
+.main-header__logo {
+  background: url(./twitter-logo.png) no-repeat center;
+  background-size: 80%;
+  padding: 30px;
+  outline: none;
+}
+
+.main-header form {
+  padding:0;
+  padding-right:20px;
+}
+
+.main-header__search input {
+  border: 1px solid #1DA1F2;
+  border-radius: 50px;
+  color:#1DA1F2;
+  outline: none;
+  padding:10px;
+  background: url('search.png')  no-repeat center;
+  background-size: 20px;
+  background-position: 160px;
+}
+
+
+
+.main-header__search input:focus  {
+  background:none;
+}
+
+.main {
+  grid-column: 1/10;
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-auto-rows: minmax(100px, auto); 
+  grid-gap:10px;
+  padding: 0;
+}
+
+
+.main-nav {
+  grid-column: 1/3;
+  grid-auto-rows: minmax(100px,845px);
+  grid-row: 1/3;
+  text-align: left;
+  display: grid;
+  align-items: start;
+  justify-items: start;
+  border-right: 1px solid lightgray;
+  
+}
+
+.main-nav * {
+  outline: none;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.main-nav .main-nav__items {
+  list-style: none;
+  padding:20px;
+}
+
+.main-nav li:hover {
+  background: #c3e7ff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.main-nav a {
+  text-decoration: none;
+  padding: 0;
+  color:black;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.main-nav a.active {
+  color:#1DA1F2;
+}
+
+.main-section {
+  grid-column: 3/10;
+  display: grid;
+  padding:0;
+}
+
+.main-section__article {
+  grid-column: 3/10;
+  padding:0;
+}
+
+.twitter-handle-name {
+  grid-column: 1/4;
+  font-size:1.2rem;
+  font-weight: bolder;
+}
+
+.twitter-handle {
+  font-weight: normal;
+  color: rgb(165, 165, 165);
+}
+.tweet-message {
+  grid-column: 1/4;
+  padding:0 10px;
+}
+
+.tweet-created {
+  grid-column: 1/4;
+  padding: 5px 10px;
+}
