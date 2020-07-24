@@ -9,15 +9,18 @@ export default class Main extends React.Component {
 
   
     render() {
-        console.log(this.props)
         return (
             <div className="wrapper">
                 <TwitterHeader/>
                 <main className="main">
                     <TwitterNavigation/>
                     <Switch>
-                        <Route exact path="/trendings" component={Trendings}/>
-                        <Route path="/" component={Tweets}/>
+                        <Route exact path="/trendings"
+                            render={(props) => (<Trendings {...props} trends={this.props.trends}/>)}
+                        />
+                        <Route  path="/" 
+                            render={(props) => (<Tweets {...props} tweets={this.props.tweets}/>)}
+                        />
                     </Switch>
                 </main>
             </div>
